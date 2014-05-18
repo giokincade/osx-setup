@@ -5,6 +5,9 @@ rm -rf ~/development/ssh-copy-id
 git clone https://github.com/beautifulcode/ssh-copy-id-for-OSX.git ~/development/ssh-copy-id
 cd ~/development/ssh-copy-id
 cat ~/development/ssh-copy-id/install.sh | bash
+brew tap caskroom/cask
+brew install brew-cask
 brew cask install divvy
 brew cask install virtualbox
 brew cask install rdio
+brew cask install growlnotify 
