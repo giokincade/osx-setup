@@ -1,6 +1,15 @@
-mdir -p ~/development
+#! /bin/bash
+set -e
+set -x 
+
+if [[ -d ~/development ]]
+then
+    mkdir -p ~/development
+fi
 brew install mosh
 brew install curl
+brew install the_silver_searcher 
+brew install ack 
 rm -rf ~/development/ssh-copy-id
 git clone https://github.com/beautifulcode/ssh-copy-id-for-OSX.git ~/development/ssh-copy-id
 cd ~/development/ssh-copy-id
