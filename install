@@ -14,16 +14,22 @@ else
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+if [[ ! -d ~/development/ssh-copy-id ]]
+then
+    git clone https://github.com/beautifulcode/ssh-copy-id-for-OSX.git ~/development/ssh-copy-id
+    cd ~/development/ssh-copy-id
+    cat ~/development/ssh-copy-id/install.sh | bash
+    cd ~ 
+fi 
+
 brew install zsh
 brew install Caskroom/cask/iterm2
 brew install mosh
 brew install curl
 brew install the_silver_searcher 
 brew install ack 
-rm -rf ~/development/ssh-copy-id
-git clone https://github.com/beautifulcode/ssh-copy-id-for-OSX.git ~/development/ssh-copy-id
-cd ~/development/ssh-copy-id
-cat ~/development/ssh-copy-id/install.sh | bash
+
 brew tap caskroom/cask
-# brew cask install virtualbox
-# brew cask install vagrant
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install docker
